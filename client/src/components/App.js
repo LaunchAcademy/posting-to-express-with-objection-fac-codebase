@@ -29,7 +29,6 @@ const App = props => {
   }, [])
 
   const postHobby = async (newHobbyData) => {
-    // console.log("newHobbyData", newHobbyData);
     try {
       const response = await fetch("/api/v1/hobbies", {
         method: "POST",
