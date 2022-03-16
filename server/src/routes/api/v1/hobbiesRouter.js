@@ -1,6 +1,6 @@
 import express from "express"
 
-import Hobby from "../../../models/Hobby.js"
+import Hobby from "../../../models/index.js"
 
 const hobbiesRouter = new express.Router()
 
