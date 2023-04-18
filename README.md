@@ -21,13 +21,14 @@ Remember that the back end consists of:
 
 1. Knex Migrations
 2. Objection Models
-3. Express Routers
 
 ## Part 1.5
 
 Insert some Hobby records in the database through the server `yarn console`
 
 ## Part 2
+
+3. Express Routers
 
 The React front-end has a form to allow users to add a new hobby. Build the back end needed to persist the data submitted via the form
 

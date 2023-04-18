@@ -1,44 +1,41 @@
-import React, { useState } from "react"
+import React, { useState } from "react";
 
-const HobbyForm = ({ postHobby }) => {
+// const HobbyForm = ({ postHobby }) => {
+const HobbyForm = (props) => {
+  const postHobby = props.postHobby;
+
   const [newHobby, setNewHobby] = useState({
     name: "",
-    description: ""
-  })
+    description: "",
+  });
 
-  const handleInputChange = event => {
+  const handleInputChange = (event) => {
     setNewHobby({
       ...newHobby,
-      [event.currentTarget.name]: event.currentTarget.value
-    })
-  }
+      [event.currentTarget.name]: event.currentTarget.value,
+    });
+  };
 
   const handleSubmit = (event) => {
-    event.preventDefault()
-    postHobby(newHobby)
-    clearForm()
-  }
+    event.preventDefault();
+    postHobby(newHobby);
+    clearForm();
+  };
 
   const clearForm = () => {
     setNewHobby({
       name: "",
-      description: ""
-    })
-  }
+      description: "",
+    });
+  };
 
   return (
     <div className="callout">
       <h1>New Hobby Form</h1>
-      <form onSubmit={handleSubmit} >
-
+      <form onSubmit={handleSubmit}>
         <label>
           Name:
-          <input
-            type="text"
-            name="name"
-            onChange={handleInputChange}
-            value={newHobby.name}
-          />
+          <input type="text" name="name" onChange={handleInputChange} value={newHobby.name} />
         </label>
 
         <label>
@@ -56,7 +53,7 @@ const HobbyForm = ({ postHobby }) => {
         </div>
       </form>
     </div>
-  )
-}
+  );
+};
 
-export default HobbyForm
+export default HobbyForm;
