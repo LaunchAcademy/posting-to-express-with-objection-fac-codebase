@@ -29,7 +29,7 @@ const App = props => {
   }, [])
 
   const postHobby = async (newHobbyData) => {
-    // console.log("newHobbyData", newHobbyData);
+    console.log("newHobbyData", newHobbyData);
     try {
       const response = await fetch("/api/v1/hobbies", {
         method: "POST",
@@ -44,6 +44,7 @@ const App = props => {
         throw(error)
       }
       const body = await response.json()
+      debugger
       setHobbies([...hobbies, body.hobby])
     } catch(err) {
       console.error(`Error in fetch: ${err.message}`)

@@ -1,6 +1,9 @@
 import React, { useState } from "react"
 
-const HobbyForm = ({ postHobby }) => {
+// const HobbyForm = ({ postHobby }) => {
+const HobbyForm = (props) => {
+  const postHobby = props.postHobby
+  
   const [newHobby, setNewHobby] = useState({
     name: "",
     description: ""
