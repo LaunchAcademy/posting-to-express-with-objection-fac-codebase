@@ -1,4 +1,5 @@
 // include all of your models here using CommonJS requires
-const Model = require("./Model")
+const Model = require("./Model.js")
+const Hobby = require("./Hobby.js")
 
-module.exports = { Model }
+module.exports = { Model, Hobby }
