@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const HobbyForm = ({ postHobby }) => {
   const [newHobby, setNewHobby] = useState({
     name: "",
-    description: null,
+    description: "",
   });
 
   const handleInputChange = (event) => {

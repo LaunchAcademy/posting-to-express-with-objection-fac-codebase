@@ -17,8 +17,9 @@ hobbiesRouter.post("/", async (req, res) => {
   try {
     console.log(req.body);
     const formData = req.body;
-    cleanUserInput(formData);
-    const newHobby = await Hobby.query().insert(formData);
+    // cleanUserInput(formData);
+    // const newHobby = await Hobby.query().insert(formData);
+    const newHobby = await Hobby.query().insertAndFetch(formData);
     console.log(newHobby);
     return res.status(201).json({ hobby: newHobby });
   } catch (error) {
